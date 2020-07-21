@@ -224,13 +224,14 @@
                 return TodoObj;
             }
             let btnAdd = document.querySelector('#btnAdd').addEventListener('click', () => {
-               
-                   // document.querySelector('.placeholder').innerHTML = 'message' ;
-                    //document.querySelector('#Popup').style.display = 'block';
+            
+                if(document.querySelector('form').checkValidity()){
                     AddToDo(getInputs()); 
                     document.querySelector('.placeholder').innerHTML = 'Added to the Todo-list !';
-                document.querySelector('.Popup-content').style.backgroundColor = 'green';
-                document.querySelector('#Popup').style.display = 'block';
+                    document.querySelector('.Popup-content').style.backgroundColor = 'green';
+                    document.querySelector('#Popup').style.display = 'block';
+                 }
+                
                            // 
             
                       
