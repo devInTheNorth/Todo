@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <title>Qwikly To-do App</title>
 </head>
-<body data-me="abcde">
+<body>
     <header>
-        <h1>Qwikly To-do App</h1>
+        <h1 class="title">
+        Qwikly  To-do App </h1> 
+                
+            
         <h2>Why people are using Qwikly</h2>
         <h3>It's: </h3>
         <ol class="features">
@@ -90,12 +93,14 @@
    
     <script>
         let currentKey = '';
+        
         let currentOp = 'A';
          window.addEventListener('load', () => {
            // fetchItems("#tasks-2m");
             //document.querySelector('.btnDelete').addEventListener('click', () => {
            // alert('okagvg');
             initButtons();
+            Object.prototype.hasItems = () => (Object.length != 0)? true: false;
            
         }); 
 
@@ -149,22 +154,18 @@
 
         }
         function expandList(listID, ctrlBtn){
+           // if (localStorage.hasItems)
             fetchItems(listID);
             initButtons();
-        document.querySelector(listID).style.display = 'block';
+            document.querySelector(listID).style.display = 'block';
             document.querySelector(ctrlBtn).classList.remove('fa-expand');
             document.querySelector(ctrlBtn).classList.add('fa-minus');
-
      } 
         let btn2m = document.querySelector('#btn2m').addEventListener('click', () => {
-            
-            
             if(document.querySelector('#btn2m').className.includes('fa-expand')){
-                
                expandList('#tasks-2m', "#btn2m"); 
               }
            else{ collapseList('#tasks-2m', "#btn2m"); }
-            
         });
 
             function fetchItems(tasksListID){
