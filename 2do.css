@@ -3,8 +3,7 @@
     padding: 0px;
 }
 html, body{
-    margin: 0px;
-    padding:0px;
+   
     
 }
 
@@ -99,7 +98,6 @@ ol.features li{
     display: inline;
     background-color: teal;
     padding:5px;
-    
 }
 main{
     padding:0px;
@@ -179,7 +177,6 @@ aside h2{
 }
 .anim-heart{
     color:red;
-    background-image: linear-gradient(red,pink, crimson);
     background-position: center;
 }
 @media(min-width:768px){
@@ -230,6 +227,7 @@ aside h2{
         padding: .1em;
         padding-top: .05em;
         position: relative;
+        transition: all 5s ease-out;
     }
     div.todo-item{
         border-radius: 20px;
