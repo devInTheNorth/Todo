@@ -5,8 +5,12 @@
 body{
    
 }
+@font-face{
+    font-family: headerfont;
+    src:url('showg.ttf')
+}
 .title{
-    font-family: 'showcard gothic regular', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: headerfont 'showcard gothic regular', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
     font-style: oblique;
     box-shadow: 6px 5px 5px grey;
